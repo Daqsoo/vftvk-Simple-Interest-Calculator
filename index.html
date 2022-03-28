@@ -1,16 +1,52 @@
+<!DOCTYPE html>
 <html>
-    <head>
+<head>
+	<meta charset="utf-8">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+	</script>
+	<title>Simple Interes Calculator</title>
+</head>
+<body>
+    <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
+        <label for="principal">Amount:</label>
+        <input type="number"  id="principal" pattern="[0-9]" onchange="checkdata()">  <br><br>
+        <!--input- Amount-->
+        <label for="rate">Interest rate:</label>
+        <input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()">
+        <span id="rate_val">10.25</span><span>%</span> <br><br>
+        <!--input- Interest rate-->
+        <label for="years"> No. of Years </label>
+        <span></span>
+        <select id="years"> <!--input- year-->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+		<br><br>
+		<button type="submit" id="submit" onclick="compute()">Compute Interest</button>
+	    <span id="result1"></span><span class ="yellow" id="principal_result"></span>
+            <!--output amount-->
+	    <span id="result2"></span><span class ="yellow" id="rate_result"></span>
+            <!--output Interest rate-->
+	    <span id="result3"></span><span class ="yellow" id="interest_result"></span>
+            <!--output result-->
+	    <span id="result4"></span><span class ="yellow" id="year_result"></span>
+            <!--output in what year you will get the money-->
+	    <br><br>	
+	    <footer>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            &#169; This Calculator belongs to Daniil
 
-        <button onclick="compute()">Compute</button>
-    </body>
+        </footer>
+    </div>
+</body>
 </html>

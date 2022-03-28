@@ -1,6 +1,6 @@
 function compute()
 	{
-		var g1,g2,g3,g4; // 
+		var g1,g2,g3,g4; // output variables
 		var principal = document.getElementById("principal").value;
 		var rate = document.getElementById("rate").value;
 		var years = document.getElementById("years").value;
@@ -18,7 +18,7 @@ function compute()
             // output results
 		g4 = document.getElementById("result4").innerHTML = "<br>in the year ";
 		document.getElementById("year_result").innerHTML = year;
-            // output what year will give you money
+            // output in what year you will get the money
 	}
 function updateRate() // update function for our range value
 	{
